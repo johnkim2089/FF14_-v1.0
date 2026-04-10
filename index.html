@@ -19,7 +19,7 @@
     --accent: #8b7cf8;
     --accent-dim: #4a3fa0;
     --text: #e4e2f0;
-    --text2: #8a87a8;
+    --text2: #fff;
     --text3: #fff;
     --crit:     #f7c26a;
     --critdmg:  #f0a050;
@@ -134,13 +134,13 @@
   }
 
   .stat-label {
-    font-size: 13px; color: var(--text);
+    font-size: 16px; color: var(--text);
     font-weight: 500;
     display: flex; flex-direction: column; gap: 2px;
   }
   .stat-label small {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 10px; color: var(--text3);
+    font-size: 12px; color: var(--text3);
     font-weight: 400;
   }
 
@@ -209,7 +209,7 @@
   .res-card:nth-child(6){animation-delay:.24s}
 
   .res-name {
-    font-size: 11px; letter-spacing: 0.1em;
+    font-size: 13px; letter-spacing: 0.1em;
     color: var(--text2); text-transform: uppercase;
     margin-bottom: 8px;
   }
@@ -359,7 +359,6 @@
       <div class="res-name">爆擊率</div>
       <div class="res-value empty" id="val-crit">—</div>
       <div class="res-sub" id="sub-crit"></div>
-      <div class="res-formula">⌊ 200 × (CRIT − SUB) / DIV + 50 ⌋ / 10</div>
       <div class="bar-track"><div class="bar-fill" id="bar-crit" style="--c:var(--crit)"></div></div>
     </div>
     <!-- CRIT DMG -->
@@ -367,7 +366,6 @@
       <div class="res-name">爆擊傷害</div>
       <div class="res-value empty" id="val-critdmg">—</div>
       <div class="res-sub" id="sub-critdmg"></div>
-      <div class="res-formula">1400 + ⌊ 200 × (CRIT − SUB) / DIV ⌋</div>
       <div class="bar-track"><div class="bar-fill" id="bar-critdmg" style="--c:var(--critdmg)"></div></div>
     </div>
     <!-- Faith -->
@@ -375,7 +373,6 @@
       <div class="res-name">信念</div>
       <div class="res-value empty" id="val-faith">—</div>
       <div class="res-sub" id="sub-faith"></div>
-      <div class="res-formula">⌊ 140 × (DET − MAIN) / DIV + 1000 ⌋</div>
       <div class="bar-track"><div class="bar-fill" id="bar-faith" style="--c:var(--faith)"></div></div>
     </div>
     <!-- Phys -->
@@ -383,7 +380,6 @@
       <div class="res-name">物理減傷</div>
       <div class="res-value empty" id="val-phys">—</div>
       <div class="res-sub" id="sub-phys"></div>
-      <div class="res-formula">減傷 % = ⌊ 15 × DEF / DIV ⌋<br>承傷 % = 100 − ⌊ 15 × DEF / DIV ⌋</div>
       <div class="bar-track"><div class="bar-fill" id="bar-phys" style="--c:var(--phys)"></div></div>
     </div>
     <!-- Magic -->
@@ -391,7 +387,6 @@
       <div class="res-name">魔法減傷</div>
       <div class="res-value empty" id="val-magic">—</div>
       <div class="res-sub" id="sub-magic"></div>
-      <div class="res-formula">減傷 % = ⌊ 15 × MDEF / DIV ⌋<br>承傷 % = 100 − ⌊ 15 × MDEF / DIV ⌋</div>
       <div class="bar-track"><div class="bar-fill" id="bar-magic" style="--c:var(--magic)"></div></div>
     </div>
     <!-- Tenacity -->
@@ -399,7 +394,6 @@
       <div class="res-name">堅韌減傷</div>
       <div class="res-value empty" id="val-tenacity">—</div>
       <div class="res-sub" id="sub-tenacity"></div>
-      <div class="res-formula">( 1000 − ⌊ 200 × (TNC − SUB) / DIV ⌋ ) / 10　→　減傷 %</div>
       <div class="bar-track"><div class="bar-fill" id="bar-tenacity" style="--c:var(--tenacity)"></div></div>
     </div>
   </div>
