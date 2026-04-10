@@ -319,23 +319,23 @@
         <div class="stat-dot" style="--c:var(--faith)"></div>
         <div class="stat-label">
           信念數值
-          <small>Determination (DET)</small>
+          <small>治療提升效率倍率 (DET)</small>
         </div>
         <input type="number" id="inp-faith" placeholder="輸入數值" min="1" />
       </div>
       <div class="stat-row" style="--c:var(--phys)">
         <div class="stat-dot" style="--c:var(--phys)"></div>
         <div class="stat-label">
-          物理減傷數值
-          <small>Defense (DEF)</small>
+          物理防禦力數值
+          <small>物理減傷 (DEF)</small>
         </div>
         <input type="number" id="inp-phys" placeholder="輸入數值" min="1" />
       </div>
       <div class="stat-row" style="--c:var(--magic)">
         <div class="stat-dot" style="--c:var(--magic)"></div>
         <div class="stat-label">
-          魔法減傷數值
-          <small>Magic Defense (MDEF)</small>
+          魔法防禦力數值
+          <small>魔法減傷 (MDEF)</small>
         </div>
         <input type="number" id="inp-magic" placeholder="輸入數值" min="1" />
       </div>
@@ -343,7 +343,7 @@
         <div class="stat-dot" style="--c:var(--tenacity)"></div>
         <div class="stat-label">
           堅韌數值
-          <small>Tenacity (TNC)</small>
+          <small>坦克整體減傷 (TNC)</small>
         </div>
         <input type="number" id="inp-tenacity" placeholder="輸入數值" min="1" />
       </div>
@@ -356,7 +356,7 @@
   <div class="results-grid">
     <!-- CRIT Rate -->
     <div class="res-card" style="--c:var(--crit)">
-      <div class="res-name">爆擊率 p(CRIT)</div>
+      <div class="res-name">爆擊率</div>
       <div class="res-value empty" id="val-crit">—</div>
       <div class="res-sub" id="sub-crit"></div>
       <div class="res-formula">⌊ 200 × (CRIT − SUB) / DIV + 50 ⌋ / 10</div>
@@ -364,7 +364,7 @@
     </div>
     <!-- CRIT DMG -->
     <div class="res-card" style="--c:var(--critdmg)">
-      <div class="res-name">爆擊傷害 f(CRIT)</div>
+      <div class="res-name">爆擊傷害</div>
       <div class="res-value empty" id="val-critdmg">—</div>
       <div class="res-sub" id="sub-critdmg"></div>
       <div class="res-formula">1400 + ⌊ 200 × (CRIT − SUB) / DIV ⌋</div>
@@ -372,7 +372,7 @@
     </div>
     <!-- Faith -->
     <div class="res-card" style="--c:var(--faith)">
-      <div class="res-name">信念 f(DET)</div>
+      <div class="res-name">信念</div>
       <div class="res-value empty" id="val-faith">—</div>
       <div class="res-sub" id="sub-faith"></div>
       <div class="res-formula">⌊ 140 × (DET − MAIN) / DIV + 1000 ⌋</div>
@@ -380,7 +380,7 @@
     </div>
     <!-- Phys -->
     <div class="res-card" style="--c:var(--phys)">
-      <div class="res-name">物理減傷 f(DEF)</div>
+      <div class="res-name">物理減傷</div>
       <div class="res-value empty" id="val-phys">—</div>
       <div class="res-sub" id="sub-phys"></div>
       <div class="res-formula">減傷 % = ⌊ 15 × DEF / DIV ⌋<br>承傷 % = 100 − ⌊ 15 × DEF / DIV ⌋</div>
@@ -388,7 +388,7 @@
     </div>
     <!-- Magic -->
     <div class="res-card" style="--c:var(--magic)">
-      <div class="res-name">魔法減傷 f(MDEF)</div>
+      <div class="res-name">魔法減傷</div>
       <div class="res-value empty" id="val-magic">—</div>
       <div class="res-sub" id="sub-magic"></div>
       <div class="res-formula">減傷 % = ⌊ 15 × MDEF / DIV ⌋<br>承傷 % = 100 − ⌊ 15 × MDEF / DIV ⌋</div>
@@ -396,7 +396,7 @@
     </div>
     <!-- Tenacity -->
     <div class="res-card wide" style="--c:var(--tenacity)">
-      <div class="res-name">堅韌減傷 f(TNC)</div>
+      <div class="res-name">堅韌減傷</div>
       <div class="res-value empty" id="val-tenacity">—</div>
       <div class="res-sub" id="sub-tenacity"></div>
       <div class="res-formula">( 1000 − ⌊ 200 × (TNC − SUB) / DIV ⌋ ) / 10　→　減傷 %</div>
